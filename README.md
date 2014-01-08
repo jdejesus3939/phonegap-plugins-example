@@ -11,3 +11,6 @@ As for now, I only develop on Android platform.
 All code sources are taken from reference. Reference: http://phonegap.com/
 
 PS: This implementation are not using phonegap WebViews. In the future, I will implement these example within phonegap WebViews.
+
+Known Bugs:
+* Hardware back button is buggy. I disabled hardware back button on every other pages but not on the main page. What I wanted is whenever user in the main page and pressing hardware back button, the app should exit properly. What I have now is pressing back button in the main page, it exits the app, but then gives out error console. I am still figuring out how to handle exit app properly.
