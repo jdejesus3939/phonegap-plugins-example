@@ -47,7 +47,7 @@ function onWAFailure() {
 // onBackKeyDown: 
 function onBackKeyDown(e) {
 	//e.preventDefault();
-	//navigator.app.exitApp();
+	navigator.app.backHistory();
 }
 
 // currentAccelerometer module =============================================

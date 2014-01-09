@@ -117,3 +117,9 @@ h1 {
 a {
 	font-size: 25px;
 }
+
+#tableIndex {
+	position: fixed;
+	top: 10%;
+	left: 5%;
+}

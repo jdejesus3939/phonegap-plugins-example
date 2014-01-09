@@ -20,7 +20,7 @@ function onLoadIndex() {
 	document.addEventListener("backbutton", onBackKeyPressed, false);
 }
 
-function onBackKeyPressed(e) {
-	e.preventDefault();
+function onBackKeyPressed() {
+	//e.preventDefault();
 	navigator.app.exitApp();
 }

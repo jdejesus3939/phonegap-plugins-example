@@ -22,24 +22,29 @@ under the License.
 		<meta name="format-detection" content="telephone=no" />
 		<!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
 		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+		<link rel="stylesheet" type="text/css" charset="UTF-8" href="index.css" />
 		<script type="text/javascript" charset="UTF-8" src="phonegap.js"></script>		
-		<script type="text/javascript" charset="UTF-8" src="js/index.js"></script>
-		<link rel="stylesheet" type="text/css" href="css/index.css" />
-		<title>Hello World</title>
+		<script type="text/javascript" charset="UTF-8" src="js/myCamera.js"></script>
+		<title>Camera Example</title>
 	</head>
-	<body onload="onLoadIndex()">
-		<h1>Phonegap Plugins</h1>
-		<br>
-		<br>
-		<table id="tableIndex" border="1">
-			<tr>
-				<td><a href="accelerometer.html">Accelerometer</a></td>
-				<td><a href="camera.html">Camera</a></td>
-			</tr>
-			<tr>
-				<td><a>Capture</a></td>
-				<td><a>Compass</a></td>
-			</tr>
-		</table>
+	<body onload="onLoadCamera()">
+		<h1>camera.getPicture</h1>
+			<p id="GPResult"></p>
+			<button onclick="getGP()">Capture Photo</button>
+			<button onclick="getGPEdit()">Capture Editable Photo</button>
+			<img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
+			<button onclick="getGPhoto(pictureSource.PHOTOLIBRARY)">From Photo Library</button>
+			<button onclick="getGPhoto(pictureSource.SAVEDPHOTOALBUM)">From Photo Album</button>
+			<img style="display:none;" id="largeImage" src="" />
+		<br><br>
+		<hr>
+
+		<h1>camera.cleanup</h1>
+			<p id="CUResult"></p>
+			<button onclick="getCU()">camera cleanup</button>
+		<br><br>
+		<hr>
+		
+		<a href="index.html">back</a>
 	</body>
 </html>

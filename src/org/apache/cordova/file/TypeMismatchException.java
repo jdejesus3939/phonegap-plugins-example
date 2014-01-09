@@ -15,33 +15,16 @@
        KIND, either express or implied.  See the License for the
        specific language governing permissions and limitations
        under the License.
- */
+*/
 
-package com.johan.phonegap.plugins;
 
-import org.apache.cordova.CordovaActivity;
+package org.apache.cordova.file;
 
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
+@SuppressWarnings("serial")
+public class TypeMismatchException extends Exception {
 
-public class PhonegapPlugins extends CordovaActivity {
+    public TypeMismatchException(String message) {
+        super(message);
+    }
 
-	Intent intent;
-	Button devicemotionPlugin;
-
-	@Override
-	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		super.init();
-        // Set by <content src="index.html" /> in config.xml
-        //super.loadUrl(Config.getStartUrl());
-        super.loadUrl("file:///android_asset/www/index.html");
-	}
-	
 }

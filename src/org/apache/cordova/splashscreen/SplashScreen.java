@@ -15,33 +15,29 @@
        KIND, either express or implied.  See the License for the
        specific language governing permissions and limitations
        under the License.
- */
+*/
 
-package com.johan.phonegap.plugins;
+package org.apache.cordova.splashscreen;
 
-import org.apache.cordova.CordovaActivity;
+import org.apache.cordova.CallbackContext;
+import org.apache.cordova.CordovaPlugin;
+import org.json.JSONArray;
 
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
+public class SplashScreen extends CordovaPlugin {
 
-public class PhonegapPlugins extends CordovaActivity {
+    @Override
+    public boolean execute(String action, JSONArray args, CallbackContext callbackContext) {
+        if (action.equals("hide")) {
+            this.webView.postMessage("splashscreen", "hide");
+        } else if (action.equals("show")){
+            this.webView.postMessage("splashscreen", "show");
+        }
+        else {
+            return false;
+        }
 
-	Intent intent;
-	Button devicemotionPlugin;
+        callbackContext.success();
+        return true;
+    }
 
-	@Override
-	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		super.init();
-        // Set by <content src="index.html" /> in config.xml
-        //super.loadUrl(Config.getStartUrl());
-        super.loadUrl("file:///android_asset/www/index.html");
-	}
-	
 }
