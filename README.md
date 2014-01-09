@@ -13,7 +13,7 @@ All code sources are taken from reference. Reference: http://phonegap.com/
 PS: This implementation is not using phonegap WebViews. In the future, I will implement these example within phonegap WebViews.
 
 Known Bugs:
-* Hardware back button - maintaining history (1/7/14). I disabled hardware back button on every other pages but not on the main page. I am depending on back link.
+* Hardware back button - maintaining history (1/7/14). I disabled hardware back button on every other pages but not on the main page. I am depending on back link that targetting on index.html.
 * Hardware back button - exiting app (1/7/14). What I wanted is whenever user in the index.html page and pressing hardware back button, the app should exit properly. What I have now is pressing back button in the main page, it exits the app, but then gives out error console. I am still figuring out how to handle exit app properly.
 * Screen orientation (1/7/14). When I change the orientation from portrait to landscape (or otherwise) and I am in the any other page but not index.html (like, accelerometer.html or camera.html), then application is just rebuilt and showed index.html again. It does not maintain the page where I were left off before the screen orientation was changed.
 
